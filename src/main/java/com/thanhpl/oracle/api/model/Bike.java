@@ -18,7 +18,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="m_bike", schema = "public")
+@Table(name="M_BIKE", schema = "public")
 public class Bike {
 	
 	@Id
@@ -27,6 +27,7 @@ public class Bike {
 	private String color;
 	private String model;
 	private String year;
+	private String producerId;
 	private Date createTime;
 	private Date updateTime;
 }

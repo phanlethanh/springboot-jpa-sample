@@ -18,7 +18,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="m_producer", schema = "public")
+@Table(name="M_PRODUCER", schema = "public")
 public class Producer {
 
 	@Id
