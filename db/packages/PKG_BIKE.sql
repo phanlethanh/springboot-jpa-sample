@@ -1,0 +1,22 @@
+CREATE OR REPLACE PACKAGE PKG_BIKE AS 
+   
+	TYPE BIKE_TYPE IS RECORD ( 
+		name VARCHAR2(100),
+		color VARCHAR2(100),
+		model VARCHAR2(100),
+		age NUMBER,
+		producer_name VARCHAR2(100),
+		user_full_name VARCHAR2(100)
+	); 
+	
+	TYPE BIKE_TYPE_ARR IS TABLE OF BIKE_TYPE INDEX BY PLS_INTEGER;
+   
+	PROCEDURE P_GET_BIKES(
+		i_user_id IN VARCHAR2,
+		i_producer_id IN VARCHAR2, 
+		o_success OUT VARCHAR2,
+		o_response_code OUT VARCHAR2,
+		o_bike_cursor OUT SYS_REFCURSOR);
+   
+END PKG_BIKE; 
+/ 
