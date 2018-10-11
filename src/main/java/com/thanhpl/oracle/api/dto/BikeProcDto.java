@@ -11,8 +11,11 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class BikeDto {
+public class BikeProcDto {
 	private String name;
-	private String userFullName;
+	private String color;
+	private String model;
 	private Integer age;
+	private String producerName;
+	private String userFullName;
 }

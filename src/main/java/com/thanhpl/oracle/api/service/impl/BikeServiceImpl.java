@@ -1,5 +1,7 @@
 package com.thanhpl.oracle.api.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,16 @@ public class BikeServiceImpl implements BikeService {
 	@Override
 	public Bike save(Bike bike) {
 		return bikeRepository.save(bike);
+	}
+
+	@Override
+	public List<Bike> getListByModel(String model) {
+		return bikeRepository.getListByModel(model);
+	}
+
+	@Override
+	public void updateName(String bikeId, String name) {
+		bikeRepository.updateName(bikeId, name);
 	}
 
 }

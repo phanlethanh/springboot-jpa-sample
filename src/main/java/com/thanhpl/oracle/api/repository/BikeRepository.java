@@ -14,7 +14,7 @@ import com.thanhpl.oracle.api.model.Bike;
 @Repository
 public interface BikeRepository extends JpaRepository<Bike, String> {
 
-	@Query(value = "SELECT * FROM public.bike \r\n" + 
+	@Query(value = "SELECT * FROM m_bike \r\n" + 
 			"WHERE model = :model\r\n" + 
 			"ORDER BY create_time DESC\r\n" + 
 			"LIMIT 10", 
@@ -23,9 +23,9 @@ public interface BikeRepository extends JpaRepository<Bike, String> {
 	
 	@Transactional
 	@Modifying
-	@Query(value = "UPDATE public.bike\r\n" + 
+	@Query(value = "UPDATE m_bike\r\n" + 
 			"SET name = :name,\r\n" + 
-			"	 update_time = current_timestamp\r\n" + 
-			"WHERE id = :id", nativeQuery = true)
-	void updatePublicStatus(@Param("id") String id, @Param("name") String name);
+			"	update_time = SYSDATE\r\n" + 
+			"WHERE bike_id = :bikeId", nativeQuery = true)
+	void updateName(@Param("bikeId") String bikeId, @Param("name") String name);
 }

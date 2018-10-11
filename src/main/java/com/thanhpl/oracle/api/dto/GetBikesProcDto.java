@@ -1,5 +1,7 @@
 package com.thanhpl.oracle.api.dto;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,8 +13,8 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class BikeDto {
-	private String name;
-	private String userFullName;
-	private Integer age;
+public class GetBikesProcDto {
+	private String success;
+	private String responseCode;
+	private List<BikeProcDto> bikes;
 }
