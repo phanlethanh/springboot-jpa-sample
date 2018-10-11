@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableAutoConfiguration
 @SpringBootApplication
-public class SpringBootOracleApplication {
+public class SpringbootOracleApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootOracleApplication.class, args);
+		SpringApplication.run(SpringbootOracleApplication.class, args);
 	}
 }
